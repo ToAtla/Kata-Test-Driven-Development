@@ -9,23 +9,17 @@ function sumOfArray(numberStrings){
 	return sum;
 }
 
-function getNumbers(input){
-	return input.split(/,|\n/);
-}
-
-function add (input) {
-	if(input === ""){
-		return 0;
-	}
-	numbers = getNumbers(input);
-
+function getNegatives(numbers){
 	negativeNumbers = [];
 	for (var i = 0; i < numbers.length; i++) {
 		if(numbers[i] < 0){
 			negativeNumbers.push(numbers[i]);
 		}
 	}
+	return negativeNumbers;
+}
 
+function checkAndThrowNegatives(negativeNumbers){
 	if(negativeNumbers.length > 0){
 		errorString = "Negatives not allowed: ";
 
@@ -36,6 +30,21 @@ function add (input) {
 
 		throw errorString;
 	}
+}
+
+
+function getNumbers(input){
+	return input.split(/,|\n/);
+}
+
+function add (input) {
+	if(input === ""){
+		return 0;
+	}
+	numbers = getNumbers(input);
+
+	checkAndThrowNegatives(getNegatives(numbers));
+	
 	return sumOfArray(numbers);
 
 }
