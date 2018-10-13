@@ -36,20 +36,22 @@ function checkAndThrowNegatives(negativeNumbers){
 	}
 }
 
-function add (input) {
-	if(input === ""){
-		return 0;
-	}
-	numbers = getNumbers(input);
-
-	checkAndThrowNegatives(getNegatives(numbers));
-
+function removeHugeNums(numbers){
 	i = numbers.length;
 	while(i--){
 		if(numbers[i] > 1000){
 			numbers.splice(i,1);
 		}
 	}
+}
+
+function add (input) {
+	if(input === ""){
+		return 0;
+	}
+	numbers = getNumbers(input);
+	checkAndThrowNegatives(getNegatives(numbers));
+	removeHugeNums(numbers);
 	return sumOfArray(numbers);
 
 }
