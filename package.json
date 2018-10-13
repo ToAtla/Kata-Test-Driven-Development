@@ -1,0 +1,22 @@
+{
+  "name": "kata",
+  "version": "1.0.0",
+  "description": "TDD Kata version 2",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ToAtla/TDD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ToAtla/TDD/issues"
+  },
+  "homepage": "https://github.com/ToAtla/TDD#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
