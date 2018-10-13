@@ -9,6 +9,10 @@ function sumOfArray(numberStrings){
 	return sum;
 }
 
+function getNumbers(input){
+	return input.split(/,|\n/);
+}
+
 function getNegatives(numbers){
 	negativeNumbers = [];
 	for (var i = 0; i < numbers.length; i++) {
@@ -30,11 +34,6 @@ function checkAndThrowNegatives(negativeNumbers){
 
 		throw errorString;
 	}
-}
-
-
-function getNumbers(input){
-	return input.split(/,|\n/);
 }
 
 function add (input) {
