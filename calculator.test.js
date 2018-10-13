@@ -42,3 +42,7 @@ it("should ignore numbers larger than 1000", () => {
 it("should allow a custom delimiter", () => {
 	expect(add("//;\n3;4;1")).toBe(8);
 });
+
+it("should allow a custom delimiter of any size", () => {
+	expect(add("//$$#$$\n3$$#$$4$$#$$1")).toBe(8);
+});
