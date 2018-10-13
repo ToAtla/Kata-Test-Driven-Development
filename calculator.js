@@ -7,7 +7,10 @@ function add (input) {
 		return parseInt(input);
 	}else{
 		numberStrings = input.split(',');
-		return parseInt(numberStrings[0]) + parseInt(numberStrings[1]);
+		if(numberStrings.length === 2)
+			return parseInt(numberStrings[0]) + parseInt(numberStrings[1]);
+		else
+			return parseInt(numberStrings[0]) + parseInt(numberStrings[1]) + parseInt(numberStrings[2]);
 	}
 
 }
