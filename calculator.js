@@ -9,12 +9,16 @@ function sumOfArray(numberStrings){
 	return sum;
 }
 
+function getNumbers(input){
+	return input.split(/,|\n/);
+}
+
 function add (input) {
 	if(input === ""){
 		return 0;
 	}
-	numberStrings = input.split(/,|\n/);
-	return sumOfArray(numberStrings);
+	numbers = getNumbers(input);
+	return sumOfArray(numbers);
 
 }
 
