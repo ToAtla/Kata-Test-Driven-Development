@@ -34,3 +34,7 @@ it("should return the sum when numbers are seperated by \\n and , characters", (
 it("should throw an exception on negative numbers", () => {
 	expect( () => { add("-1,2,-3") }).toThrow("Negatives not allowed: -1,-3");
 });
+
+it("should ignore numbers larger than 1000", () => {
+	expect(add("10002,4,2,1001")).toBe(6);
+});

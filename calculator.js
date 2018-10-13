@@ -43,7 +43,13 @@ function add (input) {
 	numbers = getNumbers(input);
 
 	checkAndThrowNegatives(getNegatives(numbers));
-	
+
+	i = numbers.length;
+	while(i--){
+		if(numbers[i] > 1000){
+			numbers.splice(i,1);
+		}
+	}
 	return sumOfArray(numbers);
 
 }
