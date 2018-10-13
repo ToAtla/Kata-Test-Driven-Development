@@ -10,6 +10,15 @@ function sumOfArray(numberStrings){
 }
 
 function getNumbers(input){
+
+	chunks = input.split('\n');
+	customDelimInfo = chunks[0];
+	var delim;
+	if(customDelimInfo[0] === '/' && customDelimInfo[1] === '/'){
+		delim = customDelimInfo[2];
+		return chunks[1].split(delim);
+	}
+
 	return input.split(/,|\n/);
 }
 
@@ -49,6 +58,10 @@ function add (input) {
 	if(input === ""){
 		return 0;
 	}
+
+	
+
+
 	numbers = getNumbers(input);
 	checkAndThrowNegatives(getNegatives(numbers));
 	removeHugeNums(numbers);
