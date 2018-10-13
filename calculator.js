@@ -1,6 +1,9 @@
 //calculator.js
 
-function add () {
+function add (number) {
+	if(number != ""){
+		return parseInt(number);
+	}
 	return 0;
 }
 
