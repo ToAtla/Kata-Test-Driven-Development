@@ -30,3 +30,7 @@ it("should return the sum when numbers are seperated by \\n character", () => {
 it("should return the sum when numbers are seperated by \\n and , characters", () => {
 	expect(add("1,2\n6,3")).toBe(12);
 });
+
+it("should throw an exception on negative numbers", () => {
+	expect( () => { add("-1,2,-3") }).toThrow("Negatives not allowed: -1,-3");
+});
