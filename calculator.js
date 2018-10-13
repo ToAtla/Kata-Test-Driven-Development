@@ -13,7 +13,7 @@ function add (input) {
 	if(input === ""){
 		return 0;
 	}
-	numberStrings = input.split(',');
+	numberStrings = input.split(/,|\n/);
 	return sumOfArray(numberStrings);
 
 }
