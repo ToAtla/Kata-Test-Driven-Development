@@ -18,3 +18,7 @@ it("should return the sum of the arguments when input is two numbers", () => {
 it("should return the sum of the arguments when input is three numbers", () => {
 	expect(add("3,5,2")).toBe(10);
 });
+
+it("should return the sum of the arguments when input is many numbers", () => {
+	expect(add("3,5,2,1,5,3")).toBe(19);
+});
