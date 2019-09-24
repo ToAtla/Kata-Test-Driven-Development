@@ -1,6 +1,3 @@
-TDD Kata version 2
-
-Þórður Atlason
-
-Software Engineering
-RU Fall 2018
+# TDD Kata
+A practice routine to introduce and reenforce good test-driven development habits.
+Project for an undergraduate level Software Engineering course at Reykjavik University Fall 2018.
